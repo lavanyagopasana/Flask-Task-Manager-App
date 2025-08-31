@@ -1,0 +1,179 @@
+// -------------------------------
+// 🎨 Variables
+// -------------------------------
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$danger-color: #e74c3c;
+$dark-text: #2c3e50;
+$light-bg: #f4f6f8;
+
+// -------------------------------
+// 🌍 Global Styles
+// -------------------------------
+body {
+  background-color: $light-bg;
+  color: $dark-text;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h3 {
+  text-align: center;
+  color: $primary-color;
+}
+
+// -------------------------------
+// 📦 Container
+// -------------------------------
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+// -------------------------------
+// 📊 Table Styling
+// -------------------------------
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+  }
+
+  th {
+    background: $primary-color;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  tr:nth-child(even) {
+    background: #f9f9f9;
+  }
+
+  tr:hover {
+    background: lighten($primary-color, 40%);
+  }
+}
+
+// -------------------------------
+// 📝 Task Form
+// -------------------------------
+.task-form {
+  margin-top: 100px;
+  display: flex;
+  gap: 10px;
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid lighten($primary-color, 20%);
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  #btn_add {
+    background: $primary-color;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}
+
+// -------------------------------
+// 🔘 Action Buttons (Edit / Delete)
+// -------------------------------
+.actions {
+  display: flex;
+  gap: 12px;         // space between buttons
+  padding: 8px;      // space inside the table cell around buttons
+  justify-content: center; // optional: center buttons in the cell
+
+  a {
+    text-decoration: none;
+    padding: 10px 16px;     // bigger padding for better click area
+    border-radius: 8px;
+    color:$primary-color;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    // ✏️ Edit button
+    &.edit {
+      background: $secondary-color; // green/blue shade (customizable)
+      &:hover {
+        background: darken($secondary-color, 8%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+
+    // 🗑️ Delete button
+    &.delete {
+      background: $danger-color; // red shade
+      &:hover {
+        background: darken($danger-color, 8%);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      }
+      &:active {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid lighten($primary-color, 20%);
+    border-radius: 6px;
+    font-size: 16px;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 4px fade_out($primary-color, 0.5);
+    }
+  }
+
+  input[type="submit"],
+  button {
+    background: $primary-color;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+}

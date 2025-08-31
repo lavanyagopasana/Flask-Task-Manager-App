@@ -1,0 +1,115 @@
+body {
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0; }
+
+h1, h3 {
+  text-align: center;
+  color: #3498db; }
+
+.content {
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; }
+  table th, table td {
+    padding: 12px 15px;
+    text-align: left; }
+  table th {
+    background: #3498db;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase; }
+  table tr:nth-child(even) {
+    background: #f9f9f9; }
+  table tr:hover {
+    background: #e1f0fa; }
+
+.task-form {
+  margin-top: 100px;
+  display: flex;
+  gap: 10px; }
+  .task-form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #8bc4ea;
+    border-radius: 8px;
+    font-size: 15px; }
+  .task-form #btn_add {
+    background: #3498db;
+    border: none;
+    padding: 10px 16px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s; }
+    .task-form #btn_add:hover {
+      background: #217dbb; }
+
+.actions {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  justify-content: center; }
+  .actions a {
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: #3498db;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+    .actions a.edit {
+      background: #2ecc71; }
+      .actions a.edit:hover {
+        background: #26ab5f;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+      .actions a.edit:active {
+        transform: scale(0.95); }
+    .actions a.delete {
+      background: #e74c3c; }
+      .actions a.delete:hover {
+        background: #df2e1b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); }
+      .actions a.delete:active {
+        transform: scale(0.95); }
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px; }
+  form input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #8bc4ea;
+    border-radius: 6px;
+    font-size: 16px; }
+    form input[type="text"]:focus {
+      outline: none;
+      border-color: #3498db;
+      box-shadow: 0 0 4px rgba(52, 152, 219, 0.5); }
+  form input[type="submit"],
+  form button {
+    background: #3498db;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out; }
+    form input[type="submit"]:hover,
+    form button:hover {
+      background: #217dbb; }
