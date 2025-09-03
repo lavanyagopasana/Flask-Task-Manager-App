@@ -20,8 +20,8 @@ Containerization: Docker
 **Installation & Run Locally**
 
 # Clone the repository
-git clone <your-repo-url>
-cd task-smash
+git clone https://github.com/lavanyagopasana/Flask-Task-Manager-App.git
+cd Flask-Task-Manager-App
 
 # Build Docker image
 docker build -t flask-task-manager .
